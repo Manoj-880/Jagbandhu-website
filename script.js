@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       downloadButton.style.color = "#fff";
       Logo.innerHTML = `<img src="assets/Jagbandhu_white_logo.svg" alt="Jagbandhu Logo" width="40rem" />`;
       brandName.style.color = "#fff";
+      menuBar.style.color = "#fff";
+      closeIcon.style.color = "#fff";
     } else {
       navBar.style.backgroundColor = "#edf2f6";
       Array.prototype.forEach.call(navItems, (navItem) => {
@@ -31,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
       downloadButton.style.color = "#026fbf";
       Logo.innerHTML = `<img src="assets/Jagbandhu_Logo.svg" alt="Jagbandhu Logo" width="40rem" />`;
       brandName.style.color = "#026fbf";
+      menuBar.style.color = "#026fbf";
+      closeIcon.style.color = "#026fbf";
     }
   };
 
@@ -52,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     closeIcon.style.display = "block";
 
     // Show the navigation list and download button
-    navList.classList.toggle("show");
-    downloadButton.classList.toggle("visible");
+    window.innerWidth <= 768 ? navList.classList.toggle("show") : null;
+    window.innerWidth <= 768 ? downloadButton.classList.toggle("visible") : null;
   });
 
   closeIcon.addEventListener("click", function () {
@@ -62,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
     closeIcon.style.display = "none";
 
     // Hide the navigation list and download button
-    navList.classList.toggle("show");
-    downloadButton.classList.toggle("visible");
+    window.innerWidth <= 768 ? navList.classList.toggle("show") : null;
+    window.innerWidth <= 768 ? downloadButton.classList.toggle("visible") : null;
   });
   Array.prototype.forEach.call(navItems, (navItem) => {
     navItem.addEventListener("click", function () {
@@ -72,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
       closeIcon.style.display = "none";
 
       // Hide the navigation list and download button
-      navList.classList.toggle("show");
-      downloadButton.classList.toggle("visible");
+      window.innerWidth <= 768 ? navList.classList.toggle("show") : null;
+      window.innerWidth <= 768 ? downloadButton.classList.toggle("visible") : null;
     });
   });
 

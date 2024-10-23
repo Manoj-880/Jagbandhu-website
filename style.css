@@ -157,7 +157,7 @@ html {
 
 .nav-bar .cta:hover {
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--white) !important;
 }
 .nav-bar .visible {
   display: none;
@@ -364,7 +364,7 @@ html {
 
 .card-desc {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-color);
 }
 
@@ -455,9 +455,6 @@ html {
 /* ///////////////screenshots section////////////////////////////// */
 
 .screenshots {
-  background-image: url(assets/movingdots.gif);
-  background-size: cover;
-  background-repeat: repeat-x;
   display: flex;
 }
 
@@ -658,6 +655,7 @@ html {
 /*///////////// media queries////////////////////////////////// */
 
 /* Media Queries for Mobile Devices */
+
 @media (max-width: 768px) {
   .nav-list,
   .cta {
@@ -680,11 +678,42 @@ html {
     z-index: 99;
     scale: 0.8;
   }
+
+  .home {
+    padding-top: 5rem;
+  }
   .hero-image {
     display: none;
   }
+
+  .hero-text {
+    font-size: 2.5rem !important;
+  }
+
+  .download-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-button {
+    width: 40%;
+  }
+
+  .platform-name {
+    font-size: 1.2rem;
+  }
+
+  .platform-icon {
+    font-size: 1.2rem;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
   .about-cards {
     flex-direction: column;
+    align-items: center;
   }
   .card:nth-child(1) {
     margin-top: 0;
@@ -698,13 +727,28 @@ html {
     flex-direction: column;
   }
 
+  .feature-title {
+    font-size: 1rem;
+  }
+
   .footer-content {
     flex-direction: column;
     gap: 3rem;
   }
 
+  .feature-desc {
+    font-size: 0.6rem;
+  }
+
   .screenshot-content {
     flex-direction: column;
+  }
+  .screenshot-content p {
+    font-size: 1rem;
+  }
+
+  .sc-animation {
+    height: 80vw;
   }
 
   .nav-bar {
