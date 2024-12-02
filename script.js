@@ -1,5 +1,7 @@
 // DOM modification
 document.addEventListener("DOMContentLoaded", function () {
+  localStorage.clear();
+  document.title = "Jagbandhu";
   const menuBar = document.querySelector(".menu-bar");
   const closeIcon = document.querySelector(".close");
   const navList = document.querySelector(".nav-list");
@@ -86,6 +88,130 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "https://onelink.to/9qh57b";
     });
   });
+
+  // Blog data array
+  const blogs = [
+    {
+      blogDate: { day: "2nd", month: "Dec", year: 2024 },
+      heading: "Jagbandhu: The Future of Digital Event Planning for Heritage and Cultural Events",
+      author: "User name 1",
+      content: [
+        {
+          status: "paragraph",
+          data: "Cultural and heritage events hold a special place in many families, whether they’re celebrating a religious ceremony, a traditional ceremony, or marking important milestones. These events help pass down values, stories, and customs to the next generation. However, planning and coordinating these events across extended families can be a daunting task. This is where Jagbandhu’s advanced event management features come into play, offering a modern solution to organize cultural and heritage celebrations.",
+        },
+        {
+          status: "heading",
+          heading: "Preserving Tradition in a Digital Age",
+        },
+        {
+          status: "paragraph",
+          data: "Jagbandhu is designed to cater specifically to the needs of families who want to maintain their cultural heritage through events and gatherings. From sending out digital invites to managing guest lists, Jagbandhu supports you in every aspect of event planning, while also helping you stay rooted in your traditions.",
+        },
+        {
+          status: "paragraph",
+          data: "Here’s how Jagbandhu can assist you in planning cultural and heritage events:",
+        },
+        {
+          status: "ol",
+          list: [
+            "Customized Cultural Templates: JagBandhu provides pre-made templates for various cultural and heritage events, making it easier to design event invitations that reflect your traditions. Whether it's a Diwali celebration, Eid gathering, or a milestone anniversary, the app offers a personalized experience by allowing you to select culturally relevant themes and languages.",
+            "Invite Management for Large Families: For cultural events that bring together extended family and friends, Jagbandhu's invite management system ensures no one is left behind. You can organize your guest list based on family tree connections and easily send out group invitations. This allows you to include family members from all over the world in your celebration.",
+            "Share Cultural Significance: Jagbandhu enables you to add details about the cultural significance of the event within your invitation. This feature is especially useful for multi-generational or multi-cultural families, helping everyone understand the importance and meaning behind the event.",
+          ],
+        },
+        {
+          status: "heading",
+          heading: "Reinforcing Family Heritage Through Technology",
+        },
+        {
+          status: "paragraph",
+          data: "In today’s fast-paced digital world, it can be difficult to maintain the close-knit family ties that cultural events often represent. Jagbandhu serves as a bridge between modern technology and age-old traditions, ensuring that families stay connected and their heritage is celebrated.",
+        },
+        {
+          status: "heading",
+          heading:
+            "Download the JagBandhu app today and experience the future of digital event planning, tailored specifically for family and cultural gatherings.",
+        },
+      ],
+    },
+    {
+      blogDate: { day: "1st", month: "Dec", year: 2024 },
+      heading: "First Blog Heading",
+      image: "assets/Jagbandhu_Logo.svg",
+      author: "UserName",
+      content: [
+        {
+          status: "paragraph",
+          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
+        },
+        {
+          status: "paragraph",
+          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
+        },
+        {
+          status: "heading",
+          heading: "Lorem ipsum dolor sit amet consectetur.",
+        },
+        {
+          status: "ul",
+          list: ["Option 1", "Option 2"],
+        },
+        {
+          status: "image",
+          src: "assets/blogs/blog1.png",
+          alt: "",
+        },
+        {
+          status: "ol",
+          list: ["Option 1", "Option 2"],
+        },
+        {
+          status: "paragraph",
+          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
+        },
+      ],
+    },
+    // Add more blog objects here
+  ];
+
+  // Function to render blogs
+  const renderBlogs = (blogs) => {
+    const container = document.getElementById("blogs-list");
+
+    const blogHTML = blogs
+      .map((blog, index) => {
+        const { blogDate, heading, content, image, author } = blog;
+
+        return `
+          <div class="blog-data">
+            <div class="blog-date">
+              <h2><span>${blogDate.day}</span></h2>
+              <p>${blogDate.month}, ${blogDate.year}</p>
+            </div>
+            <div class="blog-preview">
+              <h2 class="blog-heading">${heading}</h2>
+              <p class="blog-paragraph">
+                ${content[0].data}
+              </p>
+            </div>
+          </div>`;
+      })
+      .join("");
+
+    container.innerHTML = blogHTML;
+
+    const blogHeadings = container.querySelectorAll(".blog-heading");
+    blogHeadings.forEach((heading, index) => {
+      heading.addEventListener("click", () => {
+        localStorage.setItem("selectedBlog", JSON.stringify(blogs[index]));
+        // Navigate to blogDetail.html
+        window.location.href = `blogDetail.html?index=${index + 1}`;
+      });
+    });
+  };
+
+  renderBlogs(blogs);
 });
 
 // GSAP Animation

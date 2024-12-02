@@ -483,6 +483,77 @@ html {
   background-size: cover;
 }
 
+/*///////////// blogs section////////////////////// */
+
+.blogs {
+  padding: 5%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.blog-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blogs h2 {
+  color: var(--primary);
+}
+
+.blogs h2 span {
+  color: var(--text-color);
+}
+
+.blogs p {
+  font-size: 14;
+  color: var(--text-color);
+}
+
+.blogs-list {
+  overflow: scroll;
+  height: 50vh;
+}
+
+.blog-data {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  height: 7rem;
+  border-bottom: 0.5px solid var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.blog-date p {
+  font-size: 0.8rem;
+}
+
+.blog-heading {
+  color: var(--primary);
+  cursor: pointer;
+  height: 3.5vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.blog-heading:hover {
+  color: var(--nav-bg);
+}
+
+.blog-paragraph {
+  height: 5.1vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  color: var(--text-color);
+  font-size: 12px;
+}
+
 /*////////////// download section/////////////////////////// */
 
 .download-content {
