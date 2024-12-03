@@ -78,11 +78,6 @@ html {
   color: var(--text-color);
 }
 
-.blog-date span {
-  color: var(--primary);
-  font-weight: 500;
-}
-
 .blog_image {
   width: 100%;
   display: flex;
@@ -103,6 +98,11 @@ html {
 
 .blog-image img {
   width: 40vw;
+}
+
+.blog-content a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .toast {

@@ -28,15 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
             case "ol":
               ui += `<ol>${content.list.map((item) => `<li>${item}</li>`).join("")}</ol>`;
               break;
+            case "link":
+              ui += `<a href="${content.url}">${content.text}</a>`;
             default:
               console.log("Unknown content type");
+              console.log(content);
               break;
           }
         });
       } else {
         console.error("Error: contents is not an array");
       }
-      console.log(ui);
       return ui;
     };
 

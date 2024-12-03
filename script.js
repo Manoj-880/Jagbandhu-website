@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const navBar = document.querySelector(".nav-bar");
   const Logo = document.querySelector(".brand-logo");
   const brandName = document.querySelector(".brand-name");
+  const brandDiv = document.querySelector(".brand");
+
+  brandDiv.addEventListener("click", () => {
+    window.location.href = `index.html#`;
+  });
+  brandDiv.style.cursor = "Pointer";
 
   let checkScrollposition = () => {
     let scrollpostion = window.scrollY;
@@ -129,46 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
           data: "In today’s fast-paced digital world, it can be difficult to maintain the close-knit family ties that cultural events often represent. Jagbandhu serves as a bridge between modern technology and age-old traditions, ensuring that families stay connected and their heritage is celebrated.",
         },
         {
-          status: "heading",
-          heading:
-            "Download the JagBandhu app today and experience the future of digital event planning, tailored specifically for family and cultural gatherings.",
-        },
-      ],
-    },
-    {
-      blogDate: { day: "1st", month: "Dec", year: 2024 },
-      heading: "First Blog Heading",
-      image: "assets/Jagbandhu_Logo.svg",
-      author: "UserName",
-      content: [
-        {
-          status: "paragraph",
-          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
-        },
-        {
-          status: "paragraph",
-          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
-        },
-        {
-          status: "heading",
-          heading: "Lorem ipsum dolor sit amet consectetur.",
-        },
-        {
-          status: "ul",
-          list: ["Option 1", "Option 2"],
-        },
-        {
-          status: "image",
-          src: "assets/blogs/blog1.png",
-          alt: "",
-        },
-        {
-          status: "ol",
-          list: ["Option 1", "Option 2"],
-        },
-        {
-          status: "paragraph",
-          data: "Lorem ipsum dolor sit amet consectetur. Aliquam imperdiet urna eu quis nibh semper pulvinar aenean. Ut donec purus consequat lectus sit. Tristique cursus fringilla at gravida accumsan penatibus quisque vestibulum vel. In ac aliquam morbi a pulvinar egestas mollis sapien ut. Vulputate eget metus ut tempor felis. Massa potenti lectus sed sed est adipiscing egestas massa accumsan. Non convallis aliquam leo neque sitodio auctor mauris eget. Cursus habitant cursus placerat quis at et vel mattis. Eu amet placerat auctor sit morbi eget blandit. Orci ultrices amet massa consequat neque. Ipsum praesent id lacus vit",
+          status: "link",
+          url: "https://onelink.to/9qh57b",
+          text: "Download the JagBandhu app today and experience the future of digital event planning, tailored specifically for family and cultural gatherings.",
         },
       ],
     },
@@ -205,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
     blogHeadings.forEach((heading, index) => {
       heading.addEventListener("click", () => {
         localStorage.setItem("selectedBlog", JSON.stringify(blogs[index]));
-        // Navigate to blogDetail.html
-        window.location.href = `blogDetail.html?index=${index + 1}`;
+        // Navigate to blog.html
+        window.location.href = `blog.html?index=${index + 1}`;
       });
     });
   };

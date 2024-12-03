@@ -47,7 +47,7 @@ html {
   background-color: var(--blue-background);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0 3%;
@@ -489,6 +489,7 @@ html {
   padding: 5%;
   height: 60vh;
   overflow: hidden;
+  background-color: var(--white);
 }
 
 .blog-content {
@@ -522,11 +523,13 @@ html {
 
 .blog-data {
   display: flex;
+  overflow: hidden;
   align-items: flex-start;
   gap: 20px;
   height: 7rem;
   border-bottom: 0.5px solid var(--text-color);
   margin-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .blog-date p {
@@ -536,12 +539,15 @@ html {
 .blog-heading {
   color: var(--primary);
   cursor: pointer;
-  height: 3.5vh;
+  height: 3vh;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* Number of lines to show */
+  display: box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 .blog-heading:hover {
@@ -549,12 +555,14 @@ html {
 }
 
 .blog-paragraph {
-  height: 5.1vh;
-  overflow: hidden;
+  height: 4.12vh;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines to show */
+  display: box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
+  box-orient: vertical;
   color: var(--text-color);
   font-size: 12px;
 }
@@ -888,4 +896,11 @@ html {
   .blogs {
     height: 65vh !important;
   }
+}
+
+/*///////////// blogs page css//////////////////////// */
+
+.blogsPage {
+  padding-top: 5rem;
+  min-height: 73vh;
 }
