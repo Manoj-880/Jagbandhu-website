@@ -477,10 +477,10 @@ html {
   color: var(--text-color);
 }
 
-.sc-animation {
-  background-image: url(assets/Animated-smartphones.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+.screen-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*///////////// blogs section////////////////////// */
@@ -495,6 +495,7 @@ html {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 .blogs h2 {
@@ -508,6 +509,10 @@ html {
 .blogs p {
   font-size: 14;
   color: var(--text-color);
+}
+
+.heading img {
+  width: 30vw;
 }
 
 .blogs-list {
@@ -830,6 +835,22 @@ html {
   .footer-text {
     margin-top: 2rem;
   }
+
+  .blogs {
+    height: 90vh;
+  }
+
+  .blog-content {
+    flex-direction: column;
+  }
+
+  .heading img {
+    width: 70vw;
+  }
+
+  .sc-content img {
+    width: 60vw;
+  }
 }
 
 /* media queries for greater than mobile devices */
@@ -850,5 +871,21 @@ html {
 
   .hero-image {
     display: flex;
+  }
+
+  .blog-content {
+    flex-direction: row;
+  }
+  .heading img {
+    width: 30vw;
+  }
+  .sc-content img {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1400) {
+  .blogs {
+    height: 65vh !important;
   }
 }

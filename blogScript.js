@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
               ui += `<h3>${content.heading}</h3>`;
               break;
             case "image":
-              ui += `<img src="${content.src}" alt="${content.alt || "Image"}" />`;
+              ui += `<div class="blog-image"><img src="${content.src}" alt="${content.alt || "Image"}" /></div>`;
               break;
             case "ul":
               ui += `<ul>${content.list.map((item) => `<li>${item}</li>`).join("")}</ul>`;
